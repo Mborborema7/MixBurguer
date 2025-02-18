@@ -1,0 +1,1649 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap");
+@font-face { font-family: Nabana; src: url(./Nabana-ShadowBold\ -\ DEMO.ttf); } 
+@font-face { font-family: NabanaNormal; src: url(./Nabana.ttf); } 
+
+@font-face {
+  font-family: 'Nabana';
+  src: url('./Fonts/Nabana.ttf');
+  }
+/* Reset de margens, padding e box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.linkedin{
+  color: #111111;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-shrink: 0; /* Mantém o tamanho do header fixo */
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0; /* Mantém o tamanho do footer fixo */
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: #111;
+  font-family: Nabana;
+  color: #fff;
+}
+
+/* Estilo do cabeçalho */
+header{
+  background-color: #fed83c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+  padding: 0 3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Nabana;
+  position: sticky; 
+  top: 0; 
+  z-index: 100;
+}
+
+
+
+/* Estilo do container filho do cabeçalho */
+.headerFilho {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Estilo do logo */
+.logo {
+  width: 17rem;
+  max-width: 100%;
+  transition: transform 0.6s ease;
+  margin-top: 5rem;
+  position: absolute; 
+  top: 5%; 
+  left: 3%; 
+  z-index: 1; 
+  margin-top: -1rem;
+
+
+}
+
+/* Efeito hover no logo */
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo do texto */
+.text {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  gap: 0.5rem;
+  margin-left: 18rem;
+  font-family: Nabana;
+  color: #111111;
+  /* text-shadow: 0.5px 0px rgb(255, 255, 255), -0.5px 0px rgb(255, 255, 255), 0px -0.5px rgb(255, 255, 255),
+  0.5px 0.5px rgb(255, 255, 255),-0.5px -0.5px rgb(255, 255, 255), 0.5px -0.5px rgb(255, 255, 255),-1px 1px rgb(255, 255, 255); */
+
+
+
+}
+
+/* Estilo do subtítulo */
+.sub_titulo {
+  margin-top: -0.5rem;
+  color: #111111;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Nabana;
+
+}
+
+/* Estilo do container de busca no cabeçalho */
+.headerFilhoBusca {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilo da barra de busca */
+.busca {
+  background-color: #222;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 8px 16px;
+  width: 25rem;
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover na barra de busca */
+.busca:hover {
+  background-color: #333;
+  border: solid 2px #fed83c;
+}
+
+/* Estilo do input de busca */
+input {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 20rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif; 
+  font-family: NabanaNormal;
+}
+
+/* Estilo do input de busca quando focado */
+input:focus {
+  outline: none;
+}
+
+/* Estilo dos ícones */
+i {
+  color: #fff;
+}
+
+/* Estilo do ícone de pessoa */
+.bi-person-fill {
+  font-size: 4rem;
+  color: #222;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 2px;
+}
+
+.bi-person-fill:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo do ícone de sacola */
+.bi-bag-fill {
+  font-size: 3rem;
+  color: #222;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+.bi-bag-fill:hover {
+  transform: scale(1.1);
+}
+
+
+/* Estilo do ícone de hambúrguer */
+.burger {
+  color: #fed83c;
+  font-size: 2rem;
+}
+
+/* Estilo do container principal */
+.pai {
+  width: 100%; 
+  height: 69vh;
+  background: url("https://cdn.goomer.com.br/website/base/fe1/31d/7f5/jonathan-borba-8l8yl2ruusg-unsplash-scaled.jpg")
+    no-repeat center center/cover;
+  background-attachment: fixed; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  position: relative; 
+  overflow: hidden; 
+
+}
+
+/* Estilo dos links */
+a{
+  text-decoration: none;
+}
+
+/* Estilo do overlay no container principal */
+.pai::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+/* Estilo dos textos no container principal */
+.textos {
+  margin-left: 3rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1; 
+  color: #fff; 
+  font-family: "Open Sans", sans-serif;
+  max-width: 100%; 
+  font-family: Nabana;
+
+}
+
+/* Estilo da barra */
+.barra {
+  display: flex;
+  justify-content: center;
+  background-color: #fed83c;
+  height: 12rem;
+  
+}
+
+/* Estilo do logo na barra */
+.logoBarra {
+  width: 13rem;
+  justify-content: center;
+  margin-top: -3rem;
+  position: absolute; 
+ 
+}
+
+/* Estilo da seção "quem somos" */
+.quem {
+  width: 100%;
+  background: url("https://invexo.com.br/blog/wp-content/uploads/2021/06/Hamburgueria-da-Alf%C3%A2ndega-Ipanema.jpg")
+    no-repeat center center/cover;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+  margin-top: 0rem;
+}
+
+/* Estilo do overlay na seção "quem somos" */
+.quem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Estilo do container filho da seção "quem somos" */
+.quemFilho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+  font-family: "Poppins", sans-serif;
+  gap: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Estilo das fotos na seção "quem somos" */
+.foto {
+  width: 34rem;
+  height: 40rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover nas fotos */
+.foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do texto na seção "quem somos" */
+.texto {
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.6;
+  max-width: 45rem;
+  position: relative;
+  z-index: 1;
+  font-family: Nabana;
+}
+
+/* Estilo do título "quem somos" */
+.quemSomos {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Estilo do texto na seção "quem somos" */
+.textoQuem {
+  background-color: #000000ce;
+  padding: 5rem;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #fff;
+  text-align: left;
+  font-family: Nabana;
+
+}
+
+/* Animação de fade in na seção "quem somos" */
+.quemFilho {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Keyframes para a animação de fade in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo do botão de call to action */
+.cta {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  font-size: 1.2rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3rem;
+  transition: background-color 0.3s ease;
+  font-family: Nabana;
+}
+
+/* Efeito hover no botão de call to action */
+.cta:hover {
+  background-color: darken(var(--cor-primaria), 10%);
+}
+
+/* Estilo da seção de contato */
+.contato {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fed83c;
+  font-family: Nabana;
+
+}
+
+/* Estilo do container filho da seção de contato */
+.contatoFilho {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Estilo dos logos de contato */
+.logosContatos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Estilo das categorias de contato */
+.contatoCategoria {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Estilo dos contatos */
+.contatos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo dos ícones de contato */
+.contatos i {
+  font-size: 4rem;
+  color: #000000;
+}
+
+/* Estilo dos títulos de contato */
+.contatos h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Estilo dos títulos de contato */
+.h2Contatos{
+  color: #000000;
+  font-size: 2rem;
+}
+
+/* Efeito hover nos contatos */
+.contatos:hover {
+  transform: translateY(-5px);
+}
+
+
+
+/* Estilo da seção "mais" */
+.mais {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilo do título "quem somos" */
+.quemSomos{
+  font-size: 2rem;
+  font-family: Nabana;
+
+}
+
+/* Estilo das imagens na seção "mais" */
+.imgsMais {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Estilo das imagens e vídeos na seção "mais" */
+.maisImgsEVideos{
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.maisImgsEVideos:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos vídeos na seção "mais" */
+.videosmais1{
+  background-image: url(../IMGS/Captura\ de\ tela\ 2025-01-29\ 134946.png);
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  
+  i{
+    color: #111111;
+    font-size: 7rem;
+  }
+}
+
+.videosmais1:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos vídeos na seção "mais" */
+.videosmais2{
+  background-image: url(https://scontent.fcgh38-1.fna.fbcdn.net/v/t51.75761-15/475816585_17976937964813748_2328749997091734581_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=714c7a&_nc_ohc=Un4n4pvn9BUQ7kNvgG35iyF&_nc_oc=AdhGJYaLXzKjPL82oKmnj-ST-ljtj3e2ZMInBhPAKR-7QgrQPlPSFSOKA9UqDL0CdGVCV0Ll6RP31zBIcjT2Q97J&_nc_zt=23&_nc_ht=scontent.fcgh38-1.fna&_nc_gid=A2YINoxE5bi75W84yz3Ewi4&oh=00_AYDoIViYXnhnPOXThd0jwl8S4zuyZ50X6Wg3_oEEh38qVA&oe=67B8AC85);
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  
+  i{
+    color: #111111;
+    font-size: 7rem;
+  }
+}
+
+.videosmais2:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos vídeos na seção "mais" */
+.videosmais3{
+  background-image: url(https://scontent.fcgh12-1.fna.fbcdn.net/v/t51.75761-15/464754894_17965116746813748_861147819259864913_n.jpg?stp=c0.119.1440.1440a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=L_LUxReawz4Q7kNvgGX1o2v&_nc_oc=AdgbXgCu33YV3HHtjTjUHgpl3ebXWxxDOuXPoKR_-O19IWoxwCAwTJ943rJqd0lefNiLr6vlCPiu4Yk5kMjYEelx&_nc_zt=23&_nc_ht=scontent.fcgh12-1.fna&_nc_gid=A2YINoxE5bi75W84yz3Ewi4&oh=00_AYDuVV2X9BI2XvTWHmes8G_p19pKn9qEA8JKT3uBpzr79g&oe=67B8A76C);
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  
+  i{
+    color: #111111;
+    font-size: 7rem;
+  }
+}
+
+.videosmais3:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos vídeos na seção "mais" */
+.videosmais4{
+  background-image: url(https://scontent.fcgh38-1.fna.fbcdn.net/v/t51.75761-15/463577372_17963794478813748_8504048681605474255_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=102&ccb=1-7&_nc_sid=714c7a&_nc_ohc=82FH9ITNRAIQ7kNvgEPs27S&_nc_oc=Adh7RfFrL-Xhbh2zp9TbUd3l5BQEgZDFIT8CTyxwk9YfVKLObr1Plm71CWFfqI-pfkcq4420GpzzOnOf9lYhkaPq&_nc_zt=23&_nc_ht=scontent.fcgh38-1.fna&_nc_gid=A2YINoxE5bi75W84yz3Ewi4&oh=00_AYBjw9gM25II8vzVT6OevA6ucCX4kDldqT22YkAKu84F8w&oe=67B8AE97);
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  
+  i{
+    color: #111111;
+    font-size: 7rem;
+  }
+}
+
+.videosmais4:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos pop-ups */
+.popUps {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alerts{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alert{
+    background-color: #000000;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+
+    p{
+      text-align: center;
+      font-size: 1.5rem;
+    }
+}
+
+/* Estilo do conteúdo dos pop-ups */
+.popUp {
+    background-color: #fed83c;
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+
+.popUp .colunn-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.colunn-1 .titulo{
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+}
+
+.colunn-1 img {
+  width: 20rem;
+  height: 15rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.colunn-1 button{
+  background-color: #000000;
+  color: #fed83c;
+  border: none;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: NabanaNormal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.colunn-1 button:hover{
+  transform: scale(1.1);
+}
+
+.colunn-1 .carrinhoPopUp{
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20rem;
+  height: auto;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.carrinhoPopUp .bi-cart-fill{
+  color: white;
+  font-size: 3rem;
+}
+
+.colunn-1 .descricaoPopUp{
+  max-width: 40rem;
+  font-size: 1.3rem;
+  color: #000000;
+}
+
+.colunn-1 .escolhas{
+  background-color: #000000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  text-align: center;
+  width: 40rem;
+  height: 10rem;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.escolhas button{
+  background-color: #fed83c;
+  color: #000000;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: NabanaNormal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.escolhas .botoes{
+  display: flex;
+  gap: 2rem;
+}
+
+.botoes .inputQuantidade{
+  background-color: #fed83c;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.adicionaisList {
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 40rem;
+  font-size: 1.5rem;
+}
+
+.adicionaisList .adicionaisOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Define duas colunas com tamanho igual */
+  gap: 1rem; /* Espaçamento entre os itens */
+  justify-content: center;
+  max-width: 100%;
+}
+
+.adicionaisOptions img {
+  height: 8rem; /* Ajuste para caber no espaço disponível */
+  width: 8rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.adicionaisOptions .inputQuantidadeAdicional {
+  background-color: #000000;
+  width: 8rem;
+  text-align: center;
+}
+
+.btnAdicionaisEnviarPopUp {
+  margin-top: 2rem;
+}
+
+.popUpBtn:hover button {
+  cursor: pointer;
+}
+
+/* Estilo do título dos pop-ups */
+.popUp h1 {
+    margin: 0;
+    font-size: 24px;
+    color: black;
+}
+
+/* Estilo do rodapé */
+footer {
+  display: block;
+  font-family: Nabana;
+  margin-top: 5rem;
+}
+
+
+
+/* Estilo da seção amarela do rodapé */
+.amarelo {
+  background-color: #FED83C;
+  padding: 10px 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10rem;
+  font-size: 22px;
+
+
+}
+
+/* Estilo do logo na seção amarela do rodapé */
+ .logo2 {
+  width: 17rem;
+  max-width: 100%;
+  transition: transform 0.6s ease;
+  margin-top: -1rem;
+  margin-left: 2.9rem;
+  cursor: pointer;
+}
+
+.logo2:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo do texto na seção amarela do rodapé */
+.amarelo .text2 {
+  margin-left: 10px;
+  font-size: 22px;
+
+}
+
+/* Estilo do título na seção amarela do rodapé */
+.amarelo .titulo {
+  font-size: 29px;
+  color: #111111;
+  font-family: Nabana;
+  margin: 0;
+  margin-right: 80rem;
+}
+
+/* Estilo do subtítulo na seção amarela do rodapé */
+.amarelo .sub_titulo {
+  font-size: 22px;
+  color: #111111;
+  font-family: Nabana;
+  margin: 5px 0 0 0;
+}
+
+/* Estilo do botão na seção amarela do rodapé */
+.amarelo .btn {
+  margin-left: 20px;
+}
+
+/* Estilo do botão na seção amarela do rodapé */
+.btn2 {
+  background-color: #111111;
+  color: #fed83c;
+  border: none;
+  padding: 8px 16px; 
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: transform 0.6s ease;
+  font-family: Nabana;
+}
+
+/* Efeito hover no botão na seção amarela do rodapé */
+ .btn2:hover {
+  
+    transform: scale(1.1);
+  
+  
+}
+
+/* Estilo da seção preta do rodapé */
+.preto {
+  background-color: #FED83C;
+  color: #000000;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  font-family: Nabana;
+  height: 12rem;
+
+}
+
+/* Estilo do texto na seção preta do rodapé */
+.preto .text4 {
+  font-size: 18px; 
+  text-align: left; 
+  margin-bottom: 0;
+  font-family: Nabana;
+}
+
+/* Estilo do texto na seção preta do rodapé */
+.preto .text5 {
+  font-size: 18px;
+  text-align: right; 
+  font-family: Nabana;
+}
+
+/* Estilo do container de ícones na seção preta do rodapé */
+.preto .text5 div {
+  margin-top: 5px;
+}
+
+/* Estilo dos ícones na seção preta do rodapé */
+.preto .icons {
+  display: flex;
+  color: rgb(255, 0, 0);
+  justify-content: center;
+  align-items: end;
+  gap: 2rem;
+  font-size: 2.2rem;
+  font-family: Nabana;
+}
+
+.trabalhe{
+  color: #111111;
+  text-decoration: none;
+}
+
+.bi-facebook{
+  color: #111111;
+  transition: transform 0.6s ease;
+}
+
+.bi-linkedin{
+  color: #111111;
+  cursor: pointer;
+}
+
+.iconsFooter{
+  transition: transform 0.6s ease;
+}
+
+.iconsFooter:hover{
+  transform: scale(1.1);
+}
+
+.bi-facebook:hover{
+  transform: scale(1.1);
+}
+
+.bi-whatsapp{
+  color: #111111;
+  transition: transform 0.6s ease;
+}
+
+.bi-whatsapp:hover{
+  transform: scale(1.1);
+}
+
+.bi-instagram{
+  color: #111111;
+  transition: transform 0.6s ease;
+}
+
+.bi-instagram:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos botões do cardápio */
+.btnCardapio{
+  background-color: #fed83c;
+  color: #111111;
+  border: none;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: NabanaNormal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btnCardapio:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo dos botões do cardápio */
+.btnCardapioA{
+  background-color: #fed83c;
+  color: #111111;
+  border: none;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  transition: transform 0.6s ease;
+  cursor: pointer;
+  font-family: NabanaNormal;
+  margin-top: 1rem;
+}
+
+.btnCardapioA:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo das categorias */
+.categoria{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 5rem
+}
+
+/* Estilo dos produtos */
+.tituloCate{
+  font-family: Nabana;
+}
+
+.produtos{
+  margin-top: 1rem;  
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: #000000;
+  width: 60%;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.produtos:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo das imagens dos produtos */
+.produtos img {
+  width: 15rem;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+/* Estilo do container de imagens */
+.divImg{
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+
+/* Estilo do título dos itens */
+.itemTitulo{
+  width: 25rem;
+  font-family: Nabana;
+}
+
+/* Estilo da descrição */
+.descricao{
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: NabanaNormal;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50rem;
+}
+
+/* Estilo do preço */
+.preco{
+  margin-top: 1rem;
+  color: red;
+  font-family: Nabana;
+}
+
+/* Estilo do botão de voltar para home */
+.voltarHome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 3rem;
+
+  button{
+    font-family: NabanaNormal;
+  }
+}
+
+/* Estilo das alterações */
+.alterações{
+  background-color: #fff;
+  color: #000000;
+  
+  input{
+    color: #000000;
+  }
+}
+
+/* Estilo do botão de voltar para home */
+.btnVoltarHome {
+  font-family: DM sans;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 5rem;
+}
+
+/* Efeito hover no botão de voltar para home */
+.btnVoltarHome:hover {
+  background-color: darkred;
+
+}
+
+/* ARIEL */
+
+.btnsModis{
+  display: flex;
+  justify-content: center;
+  font-family: NabanaNormal;
+
+  gap: 1rem;
+}
+
+.btnsRemoveEEdit{
+  display: flex;
+  gap: 1rem;
+  font-family: NabanaNormal;
+
+}
+
+.popUpsAdicionar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popUpEdit {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  gap: 1rem;
+  border: none;
+  width: 35rem;
+
+  input{
+    text-align: center;
+    color: #000000;
+    border: solid 1px #000000;
+  }
+}
+
+.btnsSalvar{
+  display: flex;
+  gap: 2rem;
+  font-family: NabanaNormal;
+
+}
+
+.btnsInputs{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-family: NabanaNormal;
+}
+
+.imgPreview{
+  width: 5rem;
+}
+
+.inputNovaDescricao{
+  width: 20rem;
+}
+
+.adicionaisMenuLanche{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.adicionais{
+  color: #000000;
+  font-size: 1.5rem;
+  img{
+    width: 5rem;
+  }
+}
+
+.descricaoCarrinho{
+  width: 1rem;
+}
+.removeAdicional{
+  
+  
+  background-color: red;
+}
+
+/* Estilo dos botões do cardápio */
+.btnCardapioAriel{
+  background-color: #fed83c;
+  color: #000000;
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: NabanaNormal;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btnCardapioAriel:hover{
+  transform: scale(1.1);
+}
+
+.mensagem{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: Nabana;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1400px) {
+  header{
+    height: 6rem;
+  }
+
+  .logo{
+    width: 9rem;
+    left: 5%; 
+    margin-top: 1rem;
+  }
+
+  .text{
+    font-size: 0.8rem;
+    margin-left: 10rem;
+  }
+
+  .sub_titulo{
+    font-size: 0.8rem;
+  }
+
+  .bi-person-fill {
+    font-size: 2.7rem;
+  }
+
+  .bi-bag-fill {
+    font-size: 2.1rem;
+  }
+
+  .burger{
+    font-size: 1.5rem;
+  }
+
+  .pai{
+    height: 74vh;
+  }
+
+  .textos{
+    font-size: 0.8rem;
+  }
+
+  .barra{
+    height: 6rem;
+  }  
+
+  .logoBarra{
+    width: 7rem;
+  }
+
+  .foto{
+    width: 24rem;
+    height: 20rem;
+  }
+
+  .texto{
+    font-size: 1rem;
+  }
+
+  .quemSomos{
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
+  }
+
+  .btnCardapio{
+    width: 15rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .btnCardapioA{
+    width: 15rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .maisImgsEVideos{
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .videosmais1{
+    width: 10rem;
+    height: 10rem;
+
+    i{
+      font-size: 4rem;
+    }
+  }
+
+  .videosmais2{
+    width: 10rem;
+    height: 10rem;
+
+    i{
+      font-size: 4rem;
+    }
+  }
+
+  .videosmais3{
+    width: 10rem;
+    height: 10rem;
+
+    i{
+      font-size: 4rem;
+    }
+  }
+
+  
+
+  .videosmais4{
+    width: 10rem;
+    height: 10rem;
+
+    i{
+      font-size: 4rem;
+    }
+  }
+
+  .popUp{
+    width: 40%;
+    height: auto;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem 20rem 5rem 20rem;
+  }
+
+  .colunn-1 .titulo{
+    font-size: 1.5rem;
+  }
+
+  .colunn-1 img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .colunn-1 button{
+    width: 10rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .colunn-1 .carrinhoPopUp{
+    width: 10rem;
+    height: auto;
+    font-size: 0.6rem;
+  }
+
+  .carrinhoPopUp .bi-cart-fill{
+    font-size: 1.5rem;
+  }
+
+  .colunn-1 .descricaoPopUp{
+    max-width: 20rem;
+    font-size: 0.7rem;
+    color: #000000;
+  }
+
+  .colunn-1 .escolhas{
+    display: none;
+    width: 20rem;
+    height: 5rem;
+    gap: 1rem;
+    font-size: 0.5rem;
+  }
+
+  .escolhas button{
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .botoes .inputQuantidade{
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .adicionaisList {
+    max-width: 20rem;
+    font-size: 0.7rem;
+  }
+
+  .adicionaisOptions img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .adicionaisOptions .inputQuantidadeAdicional {
+    width: 6rem;
+  }
+
+  .btn2{
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .preto{
+    height: 6rem;
+  }
+
+  .preto .text4 {
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    br{
+      display: none;
+    }
+  }
+
+  .preto .text5 {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    gap: 0.4rem;
+
+    br{
+      display: none;
+    }
+  }
+
+  .preto .icons {
+    font-size: 1.5rem;
+  }
+
+  .busca{
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    gap: 0.8rem;
+  }
+
+  .bi-search{
+    font-size: 1rem;
+  }
+
+  input{
+    width: 6rem;
+    height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .produtos{
+    width: 40%;
+  }
+
+  .produtos img {
+    width: 10rem;
+    height: 10rem; 
+  }
+
+  .itemTitulo{
+    width: 10rem;
+  }
+
+  .preco{
+    width: 10rem;
+  }
+
+  .descricao{
+    width: 10rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .texto{
+    font-size: 0.5rem;
+  }
+
+  .maisImgsEVideos{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .videosmais1{
+    width: 5rem;
+    height: 5rem;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .videosmais2{
+    width: 5rem;
+    height: 5rem;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .videosmais3{
+    width: 5rem;
+    height: 5rem;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .videosmais4{
+    width: 5rem;
+    height: 5rem;
+
+    i{
+      font-size: 2rem;
+    }
+  }
+
+  .btn2{
+    padding: 4px 8px;
+    font-size: 0.6rem;
+  }
+
+  .preto .text4 {
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    br{
+      display: none;
+    }
+  }
+
+  .preto .text5 {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.5rem;
+    gap: 0.4rem;
+
+    br{
+      display: none;
+    }
+  }
+
+  .preto .icons {
+    font-size: 1rem;
+  }
+
+  .produtos img {
+    display: none;
+  }
+
+  .itemTitulo{
+    width: 20rem;
+  }
+
+  .preco{
+    width: 20rem;
+  }
+
+  .descricao{
+    width: 15rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .foto{
+    display: none;
+  }
+
+  .texto{
+    font-size: 0.8rem;
+    width: 20rem;
+  }
+
+  .preto .icons {
+    display: none;
+  }
+}
+
+@media (max-width: 540px) {
+  .logo{
+    display: none;
+  }
+
+  .headerFilho{
+    gap: 0;
+    margin-left: -10rem;
+  }
+
+  .text{
+    font-size: 0.6rem;
+  }
+
+  .texto{
+    font-size: 0.6rem;
+    width: 10rem;
+  }
+
+  .busca{
+    display: none;
+  }
+
+  .produtos{
+    width: 20rem;
+  }
+
+  .itemTitulo{
+    width: 20rem;
+  }
+
+  .preco{
+    width: 20rem;
+  }
+
+  .descricao{
+    width: 15rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
